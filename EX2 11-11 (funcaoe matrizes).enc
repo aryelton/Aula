@@ -1,0 +1,52 @@
+Algoritmo "semnome"
+
+Var
+Matriznotas: vetor[1..4,1..5] de Real
+Matrizalunos: vetor[1..4,1..2] de caracter
+i,j, res: inteiro
+
+Inicio
+
+para i de 1 ate 4 faca
+Escreval("Informe o nome do Aluno")
+leia(Matrizalunos[i,1])
+  para j de 1 ate 4 faca
+  escreval("Entre com a nota", j)
+  leia(Matriznotas[i,j]
+  fimpara
+fimpara
+
+res <- calcmedia (5)
+res <- calcsituacao (2,5)
+
+para i de 1 ate 4 faca
+   escreva(Matriznotas[i,5])
+ para j de 1 ate 2 faca
+   Escreva(Matrizalunos[i,j])
+ fimpara
+fimpara
+
+Funcao calcmedia (x: inteiro): inteiro
+inicio
+ para i de 1 ate 4 faca
+   para j de 1 ate 4 faca
+   Matriznotas[i,x] <- Matriznotas[i,x] + Matriznotas[i,j]
+   fimpara
+   Matriznotas[i,x] <- Matriznotas[i,x]/4
+ fimpara
+ retorne 1
+ 
+Fimfuncao
+
+Funcao calcsituacao (y,z:inteiro): inteiro
+inicio
+ para i de 1 ate 4 faca
+  se (Matriznotas[i,z] >= 7.0) entao
+     Matrizalunos[i,y] <- "aprovado"
+  senao
+     Matrizalunos[i,y] <- "reprovado"
+  fimse
+ fimpara
+ retorne 1
+ 
+fimfuncao
